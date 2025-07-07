@@ -1,0 +1,1494 @@
+/* ========================================
+   ESTILOS PERSONALIZADOS PARA TAILWIND CSS
+   Invitación XV Años - Gabriela Medina Pérez
+======================================== */
+
+/* ========================================
+   EFECTOS EMBOSSED PARA ICONOS
+======================================== */
+.icon-embossed {
+  text-shadow:
+    2px 2px 0 rgba(255, 255, 255, 0.8),
+    -1px -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================
+   GRADIENTES PERSONALIZADOS
+======================================== */
+.gold-gradient {
+  background: linear-gradient(45deg, #d4af37, #f4d03f, #d4af37);
+}
+
+.elegant-gradient {
+  background: linear-gradient(135deg,
+      #1a1a1a 0%,
+      #2d2d2d 50%,
+      #1a1a1a 100%);
+}
+
+.elegant-light-gradient {
+  background: linear-gradient(135deg, #f8f6f2 0%, #f0ede8 100%);
+}
+
+/* ========================================
+   EFECTOS DE SOMBRA PERSONALIZADOS
+======================================== */
+.shadow-gold {
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.shadow-elegant {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
+}
+
+/* ========================================
+   TEXTO CON GRADIENTE DORADO
+======================================== */
+.text-gold-gradient {
+  background: linear-gradient(45deg,
+      #d4af37 0%,
+      #f4d03f 25%,
+      #ffd700 50%,
+      #f4d03f 75%,
+      #d4af37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradient-shine 3s ease-in-out infinite;
+  /* Mejorando la nitidez del texto - sin sombras ni blur */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* Eliminar cualquier sombra o blur residual */
+  text-shadow: none;
+  filter: none;
+  /* Asegurar máxima nitidez */
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Animación de brillo para el gradiente dorado */
+@keyframes gradient-shine {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* ========================================
+   EFECTOS 3D Y CLIP PATHS
+======================================== */
+/* Clip path para sobre */
+.envelope-flap {
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+/* Perspectiva para efectos 3D */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* Transform style preserve-3d */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* ========================================
+   PATRÓN DE ESTRELLAS ANIMADO - NO UTILIZADO, ELIMINADO
+======================================== */
+
+/* ========================================
+   CONFIGURACIÓN DE SCROLL
+======================================== */
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========================================
+   PERSONALIZACIÓN DEL SCROLLBAR
+======================================== */
+/* Ocultar scrollbar pero mantener funcionalidad */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #e6c469;
+}
+
+/* ========================================
+   UTILIDADES ADICIONALES - LIMPIADAS
+======================================== */
+/* Clases helper para efectos especiales */
+.perspective-500 {
+  perspective: 500px;
+}
+
+/* Efectos de hover personalizados */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Efectos de glow para elementos especiales */
+.glow-gold {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-gold:hover {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+}
+
+/* ========================================
+   EFECTOS PARA DISPOSITIVOS MÓVILES
+======================================== */
+/* Mejorar experiencia táctil */
+@media (max-width: 768px) {
+  .hover-lift:active {
+    transform: translateY(-2px);
+  }
+
+  .glow-gold:active {
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+  }
+}
+
+/* ========================================
+   ANIMACIONES PERSONALIZADAS ADICIONALES - LIMPIADAS
+======================================== */
+/* Las animaciones .fade-in-up, .scale-in y .rotate-in no se utilizan en el HTML actual */
+
+/* ========================================
+   CLASES HELPER PARA TAILWIND - LIMPIADAS
+======================================== */
+/* Extender las capacidades de Tailwind con clases custom */
+.text-shadow-light {
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.text-shadow-dark {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* La clase .border-gradient-gold no se utiliza en el proyecto actual */
+
+/* ========================================
+   PRINT STYLES - OPTIMIZADOS
+======================================== */
+@media print {
+
+  .animate-sparkle,
+  .animate-heartbeat,
+  .animate-twinkle,
+  .animate-float {
+    animation: none;
+  }
+
+  .shadow-elegant,
+  .shadow-gold {
+    box-shadow: none;
+  }
+
+  .floating-particles,
+  .golden-dust,
+  .spiral-particles,
+  .butterfly-particles,
+  .ambient-glow {
+    display: none;
+  }
+
+  .wax-seal,
+  .wax-seal-golden {
+    animation: none;
+    filter: none;
+  }
+}
+
+/* ========================================
+   SELLO DE CERA CIRCULAR CLÁSICO
+======================================== */
+.wax-seal {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle at 30% 30%, #dc2626, #b91c1c, #991b1b);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  /* Borde exterior ultra refinado */
+  border: 0.75px solid;
+  border-color: #b91c1c #991b1b #7f1d1d #991b1b;
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.4),
+    inset 0 4px 8px rgba(255, 255, 255, 0.2),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.6),
+    0 0 0 0.5px rgba(127, 29, 29, 0.15);
+}
+
+/* Variante dorada del sello circular con pulso clickeable más sutil */
+.wax-seal-golden {
+  background: radial-gradient(circle at 30% 30%, #d4af37, #b8860b, #9a7b0a);
+  border-color: #b8860b #9a7b0a #7d6608 #9a7b0a;
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.4),
+    inset 0 4px 8px rgba(255, 255, 255, 0.3),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(212, 175, 55, 0.3),
+    0 0 0 0.5px rgba(125, 102, 8, 0.15);
+  animation: golden-pulse 2.5s ease-in-out infinite;
+}
+
+/* Animación de pulso dorado constante - más sutil */
+@keyframes golden-pulse {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 4px 8px rgba(212, 175, 55, 0.3));
+    box-shadow:
+      0 8px 16px rgba(0, 0, 0, 0.4),
+      inset 0 4px 8px rgba(255, 255, 255, 0.3),
+      inset 0 -4px 8px rgba(0, 0, 0, 0.4),
+      0 0 15px rgba(212, 175, 55, 0.3),
+      0 0 0 0.5px rgba(125, 102, 8, 0.15);
+    transform: scale(1);
+    opacity: 0.9;
+  }
+
+  50% {
+    filter: drop-shadow(0 6px 12px rgba(212, 175, 55, 0.5));
+    box-shadow:
+      0 10px 20px rgba(0, 0, 0, 0.45),
+      inset 0 4px 8px rgba(255, 255, 255, 0.35),
+      inset 0 -4px 8px rgba(0, 0, 0, 0.4),
+      0 0 25px rgba(212, 175, 55, 0.5),
+      0 0 35px rgba(212, 175, 55, 0.2),
+      0 0 0 1px rgba(125, 102, 8, 0.2);
+    transform: scale(1.03);
+    opacity: 1;
+  }
+}
+
+.wax-seal::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle at 40% 40%, #ef4444, #dc2626);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  /* Área interna presionada con borde ultra delgado */
+  border: 0.25px solid rgba(127, 29, 29, 0.3);
+  box-shadow:
+    inset 0 3px 6px rgba(0, 0, 0, 0.5),
+    inset 0 -1px 3px rgba(255, 255, 255, 0.2);
+}
+
+/* Variante dorada del before circular */
+.wax-seal-golden::before {
+  background: radial-gradient(circle at 40% 40%, #f4d03f, #d4af37);
+  border: 0.25px solid rgba(125, 102, 8, 0.3);
+  box-shadow:
+    inset 0 3px 6px rgba(0, 0, 0, 0.4),
+    inset 0 -1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.wax-seal::after {
+  content: '♔';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  color: rgba(127, 29, 29, 0.9);
+  font-weight: bold;
+  /* Efecto inset como si estuviera presionado en la cera */
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.8),
+    0 -1px 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 2px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  line-height: 1;
+  /* Simular que está hundido en la cera */
+  filter:
+    drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+}
+
+/* Corona dorada con efecto inset para el sello dorado */
+.wax-seal-golden::after {
+  color: rgba(125, 102, 8, 0.9);
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.6),
+    0 -1px 1px rgba(255, 255, 255, 0.2),
+    inset 0 1px 2px rgba(0, 0, 0, 0.4);
+  filter:
+    drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 4px rgba(125, 102, 8, 0.3));
+}
+
+/* Efectos hover mejorados para el sello circular */
+.wax-seal:hover {
+  transform: scale(1.05) translateZ(10px);
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.5),
+    inset 0 4px 8px rgba(255, 255, 255, 0.3),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.7),
+    0 0 20px rgba(220, 38, 38, 0.4),
+    0 0 0 1px rgba(127, 29, 29, 0.4);
+}
+
+/* Hover para sello dorado circular */
+.wax-seal-golden:hover {
+  transform: scale(1.05) translateZ(10px);
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.5),
+    inset 0 4px 8px rgba(255, 255, 255, 0.4),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.5),
+    0 0 25px rgba(212, 175, 55, 0.6),
+    0 0 0 1px rgba(125, 102, 8, 0.4);
+}
+
+.wax-seal:active {
+  transform: scale(0.98) translateZ(5px);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0 2px 4px rgba(255, 255, 255, 0.2),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.6),
+    0 0 0 0.5px rgba(127, 29, 29, 0.15);
+}
+
+/* Efecto de "quebrar" el sello en fragmentos */
+.wax-seal.broken {
+  animation: sealShatter 0.8s ease-out forwards;
+  pointer-events: none;
+}
+
+/* Animación principal del sello al romperse */
+@keyframes sealShatter {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+
+  30% {
+    transform: scale(1.15) rotate(3deg);
+    opacity: 0.9;
+  }
+
+  60% {
+    transform: scale(1.05) rotate(-2deg);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(0.3) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* Fragmentos del sello que se crean dinámicamente */
+.seal-fragment {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: inherit;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* Fragmento 1 - hacia arriba izquierda */
+.seal-fragment.fragment-1 {
+  animation: shatter1 1.2s ease-out forwards;
+}
+
+@keyframes shatter1 {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-40px, -60px) rotate(-180deg) scale(0.2);
+    opacity: 0;
+  }
+}
+
+/* Fragmento 2 - hacia arriba derecha */
+.seal-fragment.fragment-2 {
+  animation: shatter2 1.4s ease-out forwards;
+}
+
+@keyframes shatter2 {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(50px, -70px) rotate(220deg) scale(0.1);
+    opacity: 0;
+  }
+}
+
+/* Fragmento 3 - hacia abajo izquierda */
+.seal-fragment.fragment-3 {
+  animation: shatter3 1.1s ease-out forwards;
+}
+
+@keyframes shatter3 {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-35px, 45px) rotate(160deg) scale(0.3);
+    opacity: 0;
+  }
+}
+
+/* Fragmento 4 - hacia abajo derecha */
+.seal-fragment.fragment-4 {
+  animation: shatter4 1.3s ease-out forwards;
+}
+
+@keyframes shatter4 {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(45px, 55px) rotate(-120deg) scale(0.2);
+    opacity: 0;
+  }
+}
+
+/* Fragmento 5 - hacia la izquierda */
+.seal-fragment.fragment-5 {
+  animation: shatter5 1.0s ease-out forwards;
+}
+
+@keyframes shatter5 {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-60px, 10px) rotate(90deg) scale(0.1);
+    opacity: 0;
+  }
+}
+
+/* Fragmento 6 - hacia la derecha */
+.seal-fragment.fragment-6 {
+  animation: shatter6 1.1s ease-out forwards;
+}
+
+@keyframes shatter6 {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(65px, -10px) rotate(-90deg) scale(0.2);
+    opacity: 0;
+  }
+}
+
+/* ========================================
+   RESPONSIVIDAD PARA DISPOSITIVOS MÓVILES
+======================================== */
+@media (max-width: 768px) {
+  .wax-seal {
+    width: 70px;
+    height: 70px;
+  }
+
+  .wax-seal::before {
+    width: 50px;
+    height: 50px;
+  }
+
+  .wax-seal::after {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wax-seal {
+    width: 60px;
+    height: 60px;
+  }
+
+  .wax-seal::before {
+    width: 45px;
+    height: 45px;
+  }
+
+  .wax-seal::after {
+    font-size: 18px;
+  }
+}
+
+/* ========================================
+   PLIEGUES REALISTAS DEL SOBRE
+======================================== */
+/* Líneas diagonales principales - desde esquinas hasta centro */
+.envelope-diagonal-fold-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 130px;
+  background: linear-gradient(to bottom,
+      rgba(212, 175, 55, 0.3) 0%,
+      rgba(212, 175, 55, 0.2) 50%,
+      rgba(212, 175, 55, 0.1) 100%);
+  transform-origin: top left;
+  transform: rotate(25deg);
+  z-index: 4;
+}
+
+.envelope-diagonal-fold-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 130px;
+  background: linear-gradient(to bottom,
+      rgba(212, 175, 55, 0.3) 0%,
+      rgba(212, 175, 55, 0.2) 50%,
+      rgba(212, 175, 55, 0.1) 100%);
+  transform-origin: top right;
+  transform: rotate(-25deg);
+  z-index: 4;
+}
+
+/* Línea central vertical de pliegue */
+.envelope-center-fold {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom,
+      transparent 0%,
+      rgba(212, 175, 55, 0.2) 30%,
+      rgba(212, 175, 55, 0.3) 50%,
+      rgba(212, 175, 55, 0.2) 70%,
+      transparent 100%);
+  transform: translateX(-50%);
+  box-shadow:
+    0 0 2px rgba(212, 175, 55, 0.1),
+    1px 0 2px rgba(0, 0, 0, 0.05),
+    -1px 0 2px rgba(0, 0, 0, 0.05);
+  z-index: 3;
+}
+
+/* Sombras internas adicionales para mayor profundidad */
+.envelope-inner-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow:
+    inset 0 0 15px rgba(0, 0, 0, 0.03),
+    inset 4px 0 8px rgba(0, 0, 0, 0.02),
+    inset -4px 0 8px rgba(0, 0, 0, 0.02);
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+/* ========================================
+   MEJORAS PARA LA SOLAPA DEL SOBRE - OPTIMIZADAS
+======================================== */
+.envelope-flap {
+  z-index: 10;
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.6),
+    0 8px 16px rgba(0, 0, 0, 0.4),
+    0 4px 8px rgba(212, 175, 55, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   MEJORAS PARA LA SOLAPA INTERIOR
+======================================== */
+
+/* Solapa interior mejorada */
+.envelope-flap-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(135deg,
+      #f8f6f2 0%,
+      #f0ede8 40%,
+      #ebe8e1 70%,
+      #e8e5dd 100%);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top center;
+  z-index: 5;
+
+  /* Efectos de profundidad y realismo */
+  box-shadow:
+    0 6px 12px rgba(0, 0, 0, 0.15),
+    inset 0 3px 6px rgba(255, 255, 255, 0.4),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.08);
+
+  /* Borde sutil para definir el pliegue */
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-bottom: none;
+}
+
+/* Efectos adicionales para la solapa interior */
+.envelope-flap-inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(0, 0, 0, 0.05) 100%);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  z-index: 1;
+}
+
+/* Línea central de pliegue en la solapa interior */
+.envelope-flap-inner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 80%;
+  background: linear-gradient(to bottom,
+      rgba(212, 175, 55, 0.3) 0%,
+      rgba(212, 175, 55, 0.2) 50%,
+      transparent 100%);
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* Textura sutil de papel para la solapa interior */
+.envelope-flap-inner-texture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.03) 0%, transparent 50%);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* ========================================
+   ANIMACIONES PARA ELEMENTOS ESPECIALES - OPTIMIZADAS
+======================================== */
+/* Animación de brillo dorado para el sello dorado */
+@keyframes golden-glow {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 4px 8px rgba(212, 175, 55, 0.4));
+  }
+
+  50% {
+    filter: drop-shadow(0 6px 12px rgba(212, 175, 55, 0.6));
+  }
+}
+
+/* Animación de flotación para el texto de invitación */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(-2px) translateZ(0);
+  }
+
+  50% {
+    transform: translateY(2px) translateZ(0);
+  }
+}
+
+/* Animación de flotación optimizada para el nombre Gabriela */
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+  /* Optimizaciones para máxima nitidez durante la animación */
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* ========================================
+   TRANSICIONES SUAVES PARA ELEMENTOS - REDUNDANTES ELIMINADAS
+======================================== */
+/* Estas clases ya están disponibles en Tailwind CSS con las mismas propiedades */
+
+/* ========================================
+   ESTILOS ADICIONALES PARA IMPRESIÓN - CONSOLIDADO EN PRINT STYLES
+======================================== */
+
+/* ========================================
+   SISTEMA DE PARTÍCULAS MÚLTIPLES
+======================================== */
+
+/* Partículas flotantes doradas */
+.floating-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.floating-particles::before,
+.floating-particles::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="20" cy="30" r="1" fill="%23D4AF37" opacity="0.6"/><circle cx="80" cy="60" r="0.8" fill="%23F4D03F" opacity="0.4"/><circle cx="150" cy="40" r="1.2" fill="%23D4AF37" opacity="0.3"/><circle cx="40" cy="120" r="0.5" fill="%23F4D03F" opacity="0.7"/><circle cx="120" cy="180" r="1.5" fill="%23D4AF37" opacity="0.2"/><circle cx="180" cy="100" r="0.6" fill="%23F4D03F" opacity="0.5"/></svg>') repeat;
+  animation: float-up 25s linear infinite;
+}
+
+.floating-particles::after {
+  animation-delay: -12.5s;
+  animation-duration: 30s;
+}
+
+/* Polvo dorado */
+.golden-dust {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.golden-dust::before,
+.golden-dust::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 300%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><circle cx="50" cy="50" r="0.5" fill="%23D4AF37" opacity="0.3"/><circle cx="100" cy="80" r="0.3" fill="%23F4D03F" opacity="0.4"/><circle cx="200" cy="120" r="0.4" fill="%23D4AF37" opacity="0.2"/><circle cx="250" cy="200" r="0.6" fill="%23F4D03F" opacity="0.3"/><circle cx="150" cy="250" r="0.2" fill="%23D4AF37" opacity="0.5"/><circle cx="80" cy="180" r="0.3" fill="%23F4D03F" opacity="0.6"/><circle cx="280" cy="60" r="0.4" fill="%23D4AF37" opacity="0.4"/><circle cx="20" cy="220" r="0.5" fill="%23F4D03F" opacity="0.2"/></svg>') repeat;
+  animation: dust-float 40s linear infinite;
+}
+
+.golden-dust::after {
+  animation-delay: -20s;
+  animation-duration: 35s;
+  opacity: 0.6;
+}
+
+/* Partículas en espiral */
+.spiral-particles {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+
+.spiral-particles::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="50" r="0.8" fill="%23D4AF37" opacity="0.4"/><circle cx="90" cy="20" r="0.6" fill="%23F4D03F" opacity="0.6"/><circle cx="70" cy="80" r="1" fill="%23D4AF37" opacity="0.3"/><circle cx="30" cy="15" r="0.4" fill="%23F4D03F" opacity="0.5"/></svg>') repeat;
+  border-radius: 50%;
+  animation: spiral-rotate 15s linear infinite;
+}
+
+/* Partículas de mariposas para la carta abierta */
+.butterfly-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.butterfly-particles::before,
+.butterfly-particles::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  background-image:
+    url('../assets/images/golden-butterfly.png'),
+    url('../assets/images/golden-butterfly.png'),
+    url('../assets/images/golden-butterfly.png');
+  background-size:
+    22px 22px,
+    18px 18px,
+    26px 26px;
+  background-position:
+    80% 20%,
+    20% 60%,
+    60% 80%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  opacity: 0.4;
+  animation: float-up 45s linear infinite;
+  filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.4)) drop-shadow(0 0 6px rgba(244, 208, 63, 0.2));
+}
+
+.butterfly-particles::after {
+  animation: dust-float 50s linear infinite;
+  animation-delay: -22.5s;
+  background-position:
+    40% 30%,
+    70% 70%,
+    10% 40%;
+  background-size:
+    20px 20px,
+    24px 24px,
+    16px 16px;
+  opacity: 0.3;
+  filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.3)) drop-shadow(0 0 6px rgba(244, 208, 63, 0.15));
+}
+
+/* Mariposas flotantes dinámicas */
+.butterfly-particles .floating-butterfly {
+  position: absolute;
+  background-image: url('../assets/images/golden-butterfly.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  opacity: 0;
+  animation: butterfly-life-left 15s infinite ease-in-out;
+  filter: drop-shadow(0 0 4px rgba(212, 175, 55, 0.5)) drop-shadow(0 0 8px rgba(244, 208, 63, 0.25));
+}
+
+.butterfly-particles .floating-butterfly:nth-child(1) {
+  width: 22px;
+  height: 22px;
+  left: 50%;
+  animation-delay: 0s;
+  animation-duration: 12s;
+  animation-name: butterfly-life-left;
+}
+
+.butterfly-particles .floating-butterfly:nth-child(2) {
+  width: 18px;
+  height: 18px;
+  left: 50%;
+  animation-delay: 3s;
+  animation-duration: 15s;
+  animation-name: butterfly-life-right;
+}
+
+.butterfly-particles .floating-butterfly:nth-child(3) {
+  width: 26px;
+  height: 26px;
+  left: 50%;
+  animation-delay: 7s;
+  animation-duration: 18s;
+  animation-name: butterfly-life-top;
+}
+
+.butterfly-particles .floating-butterfly:nth-child(4) {
+  width: 20px;
+  height: 20px;
+  left: 50%;
+  animation-delay: 11s;
+  animation-duration: 14s;
+  animation-name: butterfly-life-left;
+}
+
+.butterfly-particles .floating-butterfly:nth-child(5) {
+  width: 24px;
+  height: 24px;
+  left: 50%;
+  animation-delay: 2s;
+  animation-duration: 16s;
+  animation-name: butterfly-life-right;
+}
+
+/* Animaciones específicas para diferentes direcciones de vuelo */
+@keyframes butterfly-life-left {
+  0% {
+    opacity: 0;
+    transform: translateY(50vh) translateX(0) rotate(0deg) scale(0.5);
+  }
+
+  10% {
+    opacity: 0.6;
+    transform: translateY(48vh) translateX(-5vw) rotate(-15deg) scale(0.7);
+  }
+
+  25% {
+    transform: translateY(40vh) translateX(-20vw) rotate(10deg) scale(0.9);
+  }
+
+  50% {
+    transform: translateY(25vh) translateX(-40vw) rotate(-25deg) scale(1);
+  }
+
+  75% {
+    transform: translateY(10vh) translateX(-65vw) rotate(15deg) scale(1.1);
+  }
+
+  90% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-5vh) translateX(-85vw) rotate(-30deg) scale(0.6);
+  }
+}
+
+@keyframes butterfly-life-right {
+  0% {
+    opacity: 0;
+    transform: translateY(50vh) translateX(0) rotate(0deg) scale(0.5);
+  }
+
+  10% {
+    opacity: 0.6;
+    transform: translateY(45vh) translateX(10vw) rotate(20deg) scale(0.7);
+  }
+
+  25% {
+    transform: translateY(35vh) translateX(30vw) rotate(-15deg) scale(0.9);
+  }
+
+  50% {
+    transform: translateY(20vh) translateX(55vw) rotate(25deg) scale(1);
+  }
+
+  75% {
+    transform: translateY(5vh) translateX(80vw) rotate(-10deg) scale(1.1);
+  }
+
+  90% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-10vh) translateX(100vw) rotate(35deg) scale(0.6);
+  }
+}
+
+@keyframes butterfly-life-top {
+  0% {
+    opacity: 0;
+    transform: translateY(50vh) translateX(0) rotate(0deg) scale(0.5);
+  }
+
+  10% {
+    opacity: 0.6;
+    transform: translateY(40vh) translateX(5vw) rotate(15deg) scale(0.7);
+  }
+
+  25% {
+    transform: translateY(25vh) translateX(-10vw) rotate(-20deg) scale(0.9);
+  }
+
+  50% {
+    transform: translateY(10vh) translateX(15vw) rotate(25deg) scale(1);
+  }
+
+  75% {
+    transform: translateY(-5vh) translateX(-5vw) rotate(-15deg) scale(1.1);
+  }
+
+  90% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-20vh) translateX(10vw) rotate(30deg) scale(0.6);
+  }
+}
+
+/* ========================================
+   ANIMACIONES PARA PARTÍCULAS CIRCULARES
+======================================== */
+
+@keyframes float-up {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100vh) translateX(50px);
+    opacity: 0;
+  }
+}
+
+@keyframes dust-float {
+  0% {
+    transform: translateY(100vh) translateX(0) scale(0.5);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+    transform: translateY(80vh) translateX(10px) scale(1);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateY(20vh) translateX(-10px) scale(1);
+  }
+
+  100% {
+    transform: translateY(-20vh) translateX(30px) scale(0.3);
+    opacity: 0;
+  }
+}
+
+@keyframes spiral-rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(0.8);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg) scale(1.2);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) scale(0.8);
+  }
+}
+
+@keyframes firefly-dance {
+
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+
+  33% {
+    transform: translateX(15px) translateY(-10px);
+  }
+
+  66% {
+    transform: translateX(-10px) translateY(-15px);
+  }
+}
+
+/* ========================================
+   ANIMACIONES DE VUELO ORGÁNICO PARA MARIPOSAS
+   ================================================ */
+
+/* Animación de vuelo de salida - Mariposa del sobre volando hacia la izquierda con curva sinusoidal responsiva */
+@keyframes butterfly-fly-away {
+  0% {
+    transform: translate(0, 0) rotate(15deg) scale(1);
+    opacity: 0.9;
+  }
+
+  8% {
+    transform: translate(min(-8vw, -40px), min(-12px, -0.8vh)) rotate(8deg) scale(1.02);
+    opacity: 0.95;
+  }
+
+  16% {
+    transform: translate(min(-18vw, -90px), min(8px, 0.6vh)) rotate(-3deg) scale(1.08);
+    opacity: 1;
+  }
+
+  25% {
+    transform: translate(min(-30vw, -150px), min(6px, 0.4vh)) rotate(-8deg) scale(1.1);
+    opacity: 1;
+  }
+
+  35% {
+    transform: translate(min(-42vw, -210px), min(-15px, -1vh)) rotate(12deg) scale(1.05);
+    opacity: 0.98;
+  }
+
+  45% {
+    transform: translate(min(-54vw, -270px), min(10px, 0.7vh)) rotate(-6deg) scale(1.02);
+    opacity: 0.95;
+  }
+
+  55% {
+    transform: translate(min(-65vw, -325px), min(4px, 0.3vh)) rotate(-12deg) scale(1);
+    opacity: 0.85;
+  }
+
+  65% {
+    transform: translate(min(-75vw, -375px), min(-8px, -0.5vh)) rotate(4deg) scale(0.95);
+    opacity: 0.7;
+  }
+
+  75% {
+    transform: translate(min(-85vw, -425px), min(3px, 0.2vh)) rotate(-2deg) scale(0.92);
+    opacity: 0.5;
+  }
+
+  85% {
+    transform: translate(min(-92vw, -460px), min(-2px, -0.1vh)) rotate(1deg) scale(0.88);
+    opacity: 0.3;
+  }
+
+  95% {
+    transform: translate(min(-98vw, -490px), min(1px, 0.05vh)) rotate(-1deg) scale(0.85);
+    opacity: 0.1;
+  }
+
+  100% {
+    transform: translate(min(-105vw, -525px), 0) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* Animación de vuelo de entrada - Mariposa volando desde la derecha hacia la carta con curva sinusoidal responsiva */
+@keyframes butterfly-fly-to-letter {
+  0% {
+    transform: translate(min(100vw, 500px), min(-25px, -1.5vh)) rotate(-30deg) scale(0.6);
+    opacity: 0;
+  }
+
+  10% {
+    transform: translate(min(88vw, 440px), min(-20px, -1.2vh)) rotate(-28deg) scale(0.65);
+    opacity: 0.2;
+  }
+
+  18% {
+    transform: translate(min(75vw, 375px), min(-8px, -0.5vh)) rotate(-22deg) scale(0.72);
+    opacity: 0.4;
+  }
+
+  28% {
+    transform: translate(min(62vw, 310px), min(12px, 0.8vh)) rotate(-15deg) scale(0.78);
+    opacity: 0.6;
+  }
+
+  38% {
+    transform: translate(min(48vw, 240px), min(-6px, -0.4vh)) rotate(-8deg) scale(0.85);
+    opacity: 0.75;
+  }
+
+  48% {
+    transform: translate(min(35vw, 175px), min(15px, 1vh)) rotate(2deg) scale(0.9);
+    opacity: 0.85;
+  }
+
+  58% {
+    transform: translate(min(24vw, 120px), min(-10px, -0.6vh)) rotate(-12deg) scale(0.95);
+    opacity: 0.9;
+  }
+
+  68% {
+    transform: translate(min(15vw, 75px), min(8px, 0.5vh)) rotate(-18deg) scale(0.98);
+    opacity: 0.95;
+  }
+
+  78% {
+    transform: translate(min(8vw, 40px), min(-4px, -0.3vh)) rotate(-16deg) scale(1);
+    opacity: 0.98;
+  }
+
+  88% {
+    transform: translate(min(3vw, 15px), min(6px, 0.4vh)) rotate(-14deg) scale(0.9);
+    opacity: 1;
+  }
+
+  95% {
+    transform: translate(min(1vw, 5px), min(2px, 0.1vh)) rotate(-15deg) scale(0.85);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(-15deg) scale(0.8);
+    opacity: 1;
+  }
+}
+
+/* Clases para aplicar las animaciones */
+.butterfly-fly-away {
+  animation: butterfly-fly-away 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-fill-mode: forwards;
+  will-change: transform, opacity;
+  transform-origin: center center;
+  backface-visibility: hidden;
+  /* Optimización para móviles */
+  -webkit-backface-visibility: hidden;
+}
+
+.butterfly-fly-to-letter {
+  animation: butterfly-fly-to-letter 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-fill-mode: forwards;
+  will-change: transform, opacity;
+  transform-origin: center center;
+  backface-visibility: hidden;
+  /* Optimización para móviles */
+  -webkit-backface-visibility: hidden;
+}
+
+/* Animación sutil de flotación para la mariposa posicionada en la carta */
+.butterfly-positioned {
+  animation: butterfly-gentle-float 4s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes butterfly-gentle-float {
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(-15deg) scale(0.8);
+  }
+
+  20% {
+    transform: translate(min(2px, 0.2vw), min(-3px, -0.2vh)) rotate(-13deg) scale(0.82);
+  }
+
+  40% {
+    transform: translate(min(-1px, -0.1vw), min(-2px, -0.15vh)) rotate(-17deg) scale(0.81);
+  }
+
+  60% {
+    transform: translate(min(1px, 0.1vw), min(1px, 0.1vh)) rotate(-14deg) scale(0.83);
+  }
+
+  80% {
+    transform: translate(min(-2px, -0.15vw), min(2px, 0.15vh)) rotate(-16deg) scale(0.79);
+  }
+}
+
+/* Ajustes responsivos para la flotación suave */
+@media (max-width: 640px) {
+  @keyframes butterfly-gentle-float {
+
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(-15deg) scale(0.7);
+    }
+
+    20% {
+      transform: translate(1px, -2px) rotate(-13deg) scale(0.72);
+    }
+
+    40% {
+      transform: translate(-0.5px, -1px) rotate(-17deg) scale(0.71);
+    }
+
+    60% {
+      transform: translate(0.5px, 0.5px) rotate(-14deg) scale(0.73);
+    }
+
+    80% {
+      transform: translate(-1px, 1px) rotate(-16deg) scale(0.69);
+    }
+  }
+
+  /* Optimizaciones adicionales para móviles */
+  .butterfly-fly-away,
+  .butterfly-fly-to-letter {
+    animation-duration: 4s;
+    /* Ligeramente más lento para mejor seguimiento visual */
+  }
+
+  .butterfly-positioned {
+    animation-duration: 5s;
+    /* Flotación más lenta en móviles */
+  }
+}
+
+/* Optimizaciones para pantallas muy pequeñas */
+@media (max-width: 480px) {
+
+  .butterfly-fly-away,
+  .butterfly-fly-to-letter {
+    animation-duration: 4.5s;
+  }
+
+  @keyframes butterfly-gentle-float {
+
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(-15deg) scale(0.65);
+    }
+
+    50% {
+      transform: translate(0, -1px) rotate(-16deg) scale(0.67);
+    }
+  }
+}
+
+/* Mejoras de rendimiento para dispositivos con GPU limitada */
+@media (prefers-reduced-motion: reduce) {
+
+  .butterfly-fly-away,
+  .butterfly-fly-to-letter,
+  .butterfly-positioned {
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes butterfly-gentle-float {
+
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(-15deg) scale(0.8);
+    }
+  }
+}
+
+/* ========================================
+   INDICADORES VISUALES PARA SEGUIMIENTO DE MARIPOSA (OPCIONAL)
+   ======================================== */
+
+/* Efecto sutil de estela dorada durante el vuelo (se activa solo cuando vuela) */
+.butterfly-fly-away::after,
+.butterfly-fly-to-letter::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.6) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: -1;
+  animation: trail-fade 0.8s ease-out infinite;
+}
+
+@keyframes trail-fade {
+  0% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}
+
+/* Ocultar la estela cuando la mariposa no está volando */
+.butterfly-positioned::after {
+  display: none;
+}
+
+/* ========================================
+   ANIMACIÓN DE LÍNEA DORADA BAJO EL TÍTULO
+   ======================================== */
+
+/* Animación para dibujar la línea dorada progresivamente */
+@keyframes draw-line {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+
+  20% {
+    width: 0;
+    opacity: 0.3;
+  }
+
+  60% {
+    width: min(320px, 80vw);
+    opacity: 0.8;
+  }
+
+  100% {
+    width: min(320px, 80vw);
+    opacity: 1;
+  }
+}
+
+/* Clase para aplicar la animación de dibujo de línea */
+.animate-draw-line {
+  animation: draw-line 2s ease-out forwards;
+  width: 0;
+  opacity: 0;
+  will-change: width, opacity;
+  /* Asegurar que la línea comience invisible */
+  animation-fill-mode: forwards;
+}
+
+/* Versión responsive del ancho final */
+@media (max-width: 640px) {
+  @keyframes draw-line {
+    0% {
+      width: 0;
+      opacity: 0;
+    }
+
+    20% {
+      width: 0;
+      opacity: 0.3;
+    }
+
+    60% {
+      width: min(240px, 75vw);
+      opacity: 0.8;
+    }
+
+    100% {
+      width: min(240px, 75vw);
+      opacity: 1;
+    }
+  }
+}

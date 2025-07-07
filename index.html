@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¡Mis Quince Años! | Gabriela Medina Perez</title>
+
+    <!-- Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configuración personalizada de Tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            zIndex: {
+              1: "1",
+              5: "5",
+              15: "15",
+              25: "25",
+            },
+            fontFamily: {
+              dancing: ["Dancing Script", "cursive"],
+              playfair: ["Playfair Display", "serif"],
+            },
+            scale: {
+              '115': '1.15',
+              '130': '1.30',
+            },
+            colors: {
+              elegant: {
+                black: "#1a1a1a",
+                charcoal: {
+                  dark: "#2d2d2d",
+                  medium: "#404040",
+                  light: "#565656",
+                },
+                grey: "#6a6a6a",
+              },
+              cream: {
+                white: "#f8f6f2",
+                pearl: "#f0ede8",
+                soft: "#f5f2ed",
+              },
+              gold: {
+                accent: "#d4af37",
+                bright: "#f4d03f",
+                deep: "#b8860b",
+                hover: "#e6c469",
+              },
+            },
+            animation: {
+              sparkle: "sparkle 2s infinite ease-in-out",
+              heartbeat: "heartbeat 2s infinite ease-in-out",
+              "fade-in": "fadeIn 1s ease-in-out",
+              "slide-up": "slideUp 0.8s ease-out",
+              "envelope-open": "envelopeOpen 1.5s ease-in-out",
+              float: "float 3s ease-in-out infinite",
+              twinkle: "twinkle 2s infinite alternate",
+              "crown-glow": "crownGlow 3s ease-in-out infinite",
+            },
+            keyframes: {
+              sparkle: {
+                "0%, 100%": {
+                  transform: "scale(1) rotate(0deg)",
+                  opacity: "1",
+                },
+                "50%": {
+                  transform: "scale(1.2) rotate(180deg)",
+                  opacity: "0.8",
+                },
+              },
+              heartbeat: {
+                "0%, 100%": { transform: "scale(1)" },
+                "50%": { transform: "scale(1.1)" },
+              },
+              fadeIn: {
+                "0%": { opacity: "0", transform: "translateY(20px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              slideUp: {
+                "0%": { opacity: "0", transform: "translateY(30px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              envelopeOpen: {
+                "0%": { transform: "rotateX(0deg)" },
+                "100%": { transform: "rotateX(-180deg)" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+              twinkle: {
+                "0%": { opacity: "0.5", transform: "scale(1)" },
+                "100%": { opacity: "1", transform: "scale(1.1)" },
+              },
+              crownGlow: {
+                "0%, 100%": { filter: "drop-shadow(0 0 15px #d4af37)" },
+                "50%": { filter: "drop-shadow(0 0 25px #e6c469)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tabler Icons desde CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/golden-butterfly.png" type="image/png" />
+
+    <!-- Confetti.js -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- CSS personalizado para efectos que no tiene Tailwind -->
+    <link rel="stylesheet" href="css/custom-styles.css" />
+
+    <!-- Audio de fondo -->
+    <audio id="background-music" loop preload="auto">
+      <source src="assets/audio/Gnossienne_1.mp3" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </head>
+  <body
+    class="font-playfair bg-elegant-black text-cream-white overflow-x-hidden particles-envelope"
+  >
+    <!-- SOBRE - Apertura inicial -->
+    <section
+      id="envelope"
+      class="min-h-screen flex items-center justify-center elegant-gradient relative overflow-hidden"
+    >
+      <!-- Sistema de partículas múltiples -->
+      <div class="floating-particles"></div>
+      <div class="golden-dust"></div>
+      <div class="spiral-particles"></div>
+      <div class="butterfly-particles"></div>
+
+      <!-- Efectos ambientales -->
+      <div class="ambient-glow"></div>
+
+      <div class="perspective-1000 z-10">
+        <!-- Título elegante arriba del sobre -->
+        <div class="text-center mb-8">
+          <h1
+            class="font-dancing text-4xl lg:text-5xl text-cream-white font-semibold mb-2 animate-fade-in"
+          >
+            Tienes una invitación especial...
+          </h1>
+          <div
+            class="h-0.5 bg-gradient-to-r from-transparent via-gold-accent to-transparent mx-auto animate-draw-line"
+            style="animation-delay: 0.8s;"
+          ></div>
+        </div>
+
+        <div class="relative w-96 h-64 mx-auto overflow-visible animate-slide-up" style="animation-delay: 1s; opacity: 0; animation-fill-mode: forwards;"">
+          <!-- Fondo completo del sobre que se extiende completamente -->
+          <div
+            class="absolute top-0 left-0 w-full h-64 bg-gradient-to-t from-cream-white to-cream-pearl border-2 border-gold-accent shadow-elegant z-1"
+            style="border-radius: 0 0 0.5rem 0.5rem"
+          ></div>
+
+          <!-- Sombras internas para profundidad -->
+          <div class="envelope-inner-shadow"></div>
+
+          <!-- Línea central de pliegue -->
+          <div class="envelope-center-fold"></div>
+
+          <!-- Pliegues laterales del sobre -->
+          <div
+            class="absolute top-0 left-0 w-4 h-64 bg-gradient-to-r from-cream-pearl to-cream-soft opacity-70 z-2"
+            style="
+              border-right: 1px solid rgba(212, 175, 55, 0.3);
+              box-shadow: inset -2px 0 4px rgba(0, 0, 0, 0.1);
+            "
+          ></div>
+
+          <div
+            class="absolute top-0 right-0 w-4 h-64 bg-gradient-to-l from-cream-pearl to-cream-soft opacity-70 z-2"
+            style="
+              border-left: 1px solid rgba(212, 175, 55, 0.3);
+              box-shadow: inset 2px 0 4px rgba(0, 0, 0, 0.1);
+            "
+          ></div>
+
+          <!-- Pliegue inferior del sobre -->
+          <div
+            class="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-cream-soft to-cream-pearl opacity-60 z-2"
+            style="
+              border-top: 1px solid rgba(212, 175, 55, 0.2);
+              box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.08);
+              border-radius: 0 0 0.5rem 0.5rem;
+            "
+          ></div>
+
+          <!-- Solapa interior del sobre (debajo de la dorada) -->
+          <div class="envelope-flap-inner">
+            <!-- Textura adicional para mayor realismo -->
+            <div class="envelope-flap-inner-texture"></div>
+          </div>
+
+          <!-- Solapa del sobre (dorada, encima de la interior) -->
+          <div
+            id="envelope-flap"
+            class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-gold-accent to-gold-deep envelope-flap transform-gpu origin-top transition-transform duration-1000 ease-in-out shadow-lg border border-gold-hover z-10"
+          ></div>
+
+          <!-- Mariposa dorada flotante en la esquina inferior izquierda -->
+          <div
+            id="envelope-butterfly"
+            class="absolute bottom-2 left-2 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 z-15 opacity-90 hover:opacity-100 transition-opacity duration-300"
+            style="transform: rotate(15deg);"
+          >
+            <img
+              src="assets/images/golden-butterfly.png"
+              alt="🦋"
+              class="w-full h-full object-contain drop-shadow-xl animate-float"
+              style="animation-duration: 4s; animation-delay: 0.5s;"
+            />
+          </div>
+
+          <!-- Contenido del sobre -->
+          <div
+            class="absolute top-12 left-0 w-full h-52 preserve-3d transition-transform duration-500 ease-in-out z-20"
+          >
+            <!-- Área de contenido -->
+            <div
+              class="flex flex-col items-center justify-center h-full p-6 text-center"
+            >
+              <!-- Sello de cera dorado en el centro -->
+              <div
+                id="open-envelope"
+                class="wax-seal wax-seal-golden mb-4"
+                title="Romper el sello para abrir la invitación"
+              ></div>
+
+              <p class="font-playfair text-lg text-elegant-black italic">
+                Celebración de XV Años
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARTA COMPLETA - Todas las secciones dentro de la carta -->
+    <section
+      id="letter-content"
+      class="min-h-screen bg-elegant-black py-16 transition-all duration-1000 ease-out opacity-0 transform translate-y-12"
+      style="display: none"
+    >
+      <!-- Sistema de partículas múltiples para la carta -->
+      <div class="floating-particles"></div>
+      <div class="golden-dust"></div>
+      <div class="spiral-particles"></div>
+      <div class="butterfly-particles"></div>
+
+      <!-- Efectos ambientales para la carta -->
+      <div class="ambient-glow"></div>
+
+      <div class="max-w-4xl mx-auto px-4 relative z-10">
+        <div
+          class="elegant-light-gradient text-elegant-black p-8 lg:p-12 rounded-lg shadow-elegant border border-gold-accent/30 relative paper-texture"
+        >
+          <!-- Efecto de brillo dorado alrededor -->
+          <div
+            class="absolute -inset-2 gold-gradient rounded-2xl blur-sm opacity-20 -z-10"
+          ></div>
+
+          <!-- Mariposa dorada en la esquina superior derecha de la carta -->
+          <div
+            id="letter-butterfly"
+            class="absolute -top-4 -right-4 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 z-25 opacity-0 transition-all duration-1000"
+            style="transform: translate(100vw, -20px) rotate(-30deg) scale(0.6);"
+          >
+            <img
+              src="assets/images/golden-butterfly.png"
+              alt="🦋"
+              class="w-full h-full object-contain drop-shadow-xl animate-float"
+              style="animation-duration: 3s; animation-delay: 0s;"
+            />
+          </div>
+
+          <!-- ENCABEZADO DE LA CARTA -->
+          <div class="text-center mb-8">
+            <i
+              class="ti ti-heart-filled text-5xl heart-perforation mb-4 animate-heartbeat drop-shadow-lg"
+            ></i>
+          </div>
+
+          <!-- MENSAJE DE LOS PADRES -->
+          <div class="mb-12 pb-8 border-b-2 border-gold-accent/20">
+            <p
+              class="font-playfair italic text-2xl mb-6 leading-relaxed text-gold-deep font-semibold"
+            >
+              Querido/a invitado/a,
+            </p>
+            <p
+              class="font-playfair text-base leading-relaxed mb-6 text-justify"
+            >
+              Con el corazón lleno de amor y orgullo, nos complace invitarte a
+              celebrar uno de los momentos más especiales en la vida de nuestra
+              hija: sus quince años.
+            </p>
+            <p
+              class="font-playfair text-base leading-relaxed mb-6 text-justify"
+            >
+              Gabriela ha crecido llena de sueños, alegría y amor, y ahora
+              queremos compartir con nuestros seres queridos este hermoso paso
+              hacia la juventud.
+            </p>
+            <p
+              class="font-playfair text-base leading-relaxed mb-6 text-justify"
+            >
+              Será una noche mágica donde los sueños se hacen realidad, y
+              esperamos que nos acompañes en esta celebración tan importante
+              para nuestra familia.
+            </p>
+
+            <!-- Firmas de los padres -->
+            <div class="text-center mt-8">
+              <p
+                class="font-dancing text-2xl text-gold-deep font-semibold mb-1"
+              >
+                Luis Humberto Medina Larios
+              </p>
+              <p
+                class="font-playfair text-lg text-elegant-charcoal-medium my-2"
+              >
+                &
+              </p>
+              <p class="font-dancing text-2xl text-gold-deep font-semibold">
+                Yadira Pérez González
+              </p>
+            </div>
+          </div>
+
+          <!-- HERO SECTION - NOMBRE DE LA QUINCEAÑERA -->
+          <div class="text-center my-12">
+            <div class="mb-6">
+              <img
+                id="crown-image"
+                src="assets/images/crown.png"
+                alt="👑"
+                class="w-20 h-20 lg:w-24 lg:h-24 mx-auto animate-crown-glow drop-shadow-xl cursor-pointer"
+              />
+            </div>
+
+            <!-- Texto introductorio -->
+            <p
+              class="font-playfair text-2xl italic text-elegant-charcoal-medium mb-4"
+            >
+              Nuestra hija
+            </p>
+
+            <h1
+              class="font-dancing text-8xl lg:text-9xl xl:text-[12rem] font-bold text-gold-gradient mb-4 animate-float leading-none"
+            >
+              Gabriela
+            </h1>
+
+            <h2
+              class="font-playfair text-3xl lg:text-4xl text-elegant-charcoal-medium font-medium italic mb-6 tracking-wide"
+            >
+              Medina Pérez
+            </h2>
+
+            <!-- Estrellas decorativas -->
+            <div class="flex justify-center space-x-4 mb-6">
+              <i
+                class="ti ti-star-filled text-2xl text-gold-accent animate-twinkle icon-embossed"
+              ></i>
+              <i
+                class="ti ti-star-filled text-3xl text-gold-bright animate-twinkle icon-embossed"
+                style="animation-delay: 0.7s"
+              ></i>
+              <i
+                class="ti ti-star-filled text-2xl text-gold-accent animate-twinkle icon-embossed"
+                style="animation-delay: 1.4s"
+              ></i>
+            </div>
+
+            <p class="font-playfair text-xl italic text-elegant-grey">
+              celebra sus quince años
+            </p>
+          </div>
+
+          <!-- CINTILLA DE FECHA -->
+          <div class="my-12">
+            <div class="flex items-center justify-center">
+              <div class="bg-transparent p-6 max-w-lg w-full relative">
+                <!-- Línea decorativa superior -->
+                <div
+                  class="w-32 h-0.5 bg-gradient-to-r from-transparent via-gold-accent to-transparent mx-auto mb-6"
+                ></div>
+
+                <!-- Contenido principal - Grid de 3 columnas iguales -->
+                <div class="grid grid-cols-3 gap-4 text-center text-elegant-black">
+                  <!-- Columna 1: Día de la semana -->
+                  <div class="flex flex-col justify-center items-center">
+                    <div
+                      class="text-lg font-playfair font-semibold tracking-widest uppercase text-elegant-charcoal-medium"
+                    >
+                      VIERNES
+                    </div>
+                  </div>
+
+                  <!-- Columna 2: Día del mes y mes -->
+                  <div class="flex flex-col justify-center items-center">
+                    <div
+                      class="text-6xl font-dancing font-bold text-gold-accent leading-none mb-1"
+                    >
+                      25
+                    </div>
+                    <div
+                      class="text-sm font-playfair font-semibold tracking-widest uppercase text-elegant-charcoal-medium"
+                    >
+                      JULIO
+                    </div>
+                  </div>
+
+                  <!-- Columna 3: Año -->
+                  <div class="flex flex-col justify-center items-center">
+                    <div
+                      class="text-3xl font-playfair font-semibold tracking-widest uppercase text-elegant-charcoal-medium"
+                    >
+                      2025
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Línea decorativa inferior -->
+                <div
+                  class="w-32 h-0.5 bg-gradient-to-r from-transparent via-gold-accent to-transparent mx-auto mt-6"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DETALLES DEL EVENTO -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 my-12">
+            <!-- Ceremonia Religiosa -->
+            <div
+              class="bg-gradient-to-br from-cream-white to-cream-pearl border-2 border-gold-accent rounded-2xl p-6 text-center transition-all duration-300 hover:border-gold-hover hover:shadow-md"
+            >
+              <i
+                class="ti ti-building-church text-6xl text-gold-deep mb-4 block"
+              ></i>
+              <h3
+                class="font-dancing text-2xl text-elegant-black mb-4 font-semibold"
+              >
+                Ceremonia Religiosa
+              </h3>
+              <div class="space-y-2 text-left mb-4">
+                <p class="font-playfair text-elegant-black font-medium">
+                  <i class="ti ti-calendar text-gold-deep mr-2 text-lg"></i>
+                  Viernes, 25 de Julio, 2025
+                </p>
+                <p class="font-playfair text-elegant-black font-medium">
+                  <i class="ti ti-clock text-gold-deep mr-2 text-lg"></i>
+                  7:00 PM
+                </p>
+                <p class="font-playfair text-elegant-black font-medium">
+                  <i class="ti ti-map-pin text-gold-deep mr-2 text-lg"></i>
+                  Parroquia Virgen del Carmen<br />
+                  <span class="text-sm text-elegant-charcoal-medium ml-6"
+                    >Ciudad Valles, San Luis Potosí</span
+                  >
+                </p>
+              </div>
+
+              <!-- Botón de ubicación -->
+              <a
+                href="https://maps.google.com/maps?q=Parroquia+Virgen+del+Carmen+Ciudad+Valles+San+Luis+Potosí"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center bg-gold-accent hover:bg-gold-hover text-cream-white font-playfair font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:shadow-md mt-2"
+              >
+                <i class="ti ti-map-pin mr-2 text-lg"></i>
+                Ver ubicación
+              </a>
+            </div>
+
+            <!-- Fiesta -->
+            <div
+              class="bg-gradient-to-br from-cream-white to-cream-pearl border-2 border-gold-accent rounded-2xl p-6 text-center transition-all duration-300 hover:border-gold-hover hover:shadow-md"
+            >
+              <i class="ti ti-confetti text-6xl text-gold-deep mb-4 block"></i>
+              <h3
+                class="font-dancing text-2xl text-elegant-black mb-4 font-semibold"
+              >
+                Celebración
+              </h3>
+              <div class="space-y-2 text-left mb-4">
+                <p class="font-playfair text-elegant-black font-medium">
+                  <i class="ti ti-calendar text-gold-deep mr-2 text-lg"></i>
+                  Viernes, 25 de Julio, 2025
+                </p>
+                <p class="font-playfair text-elegant-black font-medium">
+                  <i class="ti ti-clock text-gold-deep mr-2 text-lg"></i>
+                  8:00 PM
+                </p>
+                <p class="font-playfair text-elegant-black font-medium">
+                  <i class="ti ti-map-pin text-gold-deep mr-2 text-lg"></i>
+                  Real Lulus<br />
+                  <span class="text-sm text-elegant-charcoal-medium ml-6"
+                    >Ciudad Valles, San Luis Potosí</span
+                  >
+                </p>
+              </div>
+
+              <!-- Botón de ubicación -->
+              <a
+                href="https://maps.google.com/maps?q=Real+Lulus+Ciudad+Valles+San+Luis+Potosí"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center bg-gold-accent hover:bg-gold-hover text-cream-white font-playfair font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:shadow-md mt-2"
+              >
+                <i class="ti ti-map-pin mr-2 text-lg"></i>
+                Ver ubicación
+              </a>
+            </div>
+          </div>
+
+          <!-- CUENTA REGRESIVA -->
+          <div class="text-center my-12">
+            <h2 class="font-dancing text-4xl text-gold-accent mb-6">
+              Faltan solo...
+            </h2>
+
+            <div class="flex justify-center gap-4 lg:gap-6 mb-6 flex-wrap">
+              <!-- Días -->
+              <div
+                class="bg-elegant-charcoal-dark border-2 border-gold-accent rounded-2xl p-4 min-w-[100px] shadow-gold hover:transform hover:-translate-y-2 transition-all duration-300"
+              >
+                <span
+                  class="block text-4xl font-bold text-gold-accent leading-none"
+                  id="days"
+                  >00</span
+                >
+                <span
+                  class="block text-sm text-cream-white mt-2 uppercase tracking-wide font-semibold"
+                  >Días</span
+                >
+              </div>
+
+              <!-- Horas -->
+              <div
+                class="bg-elegant-charcoal-dark border-2 border-gold-accent rounded-2xl p-4 min-w-[100px] shadow-gold hover:transform hover:-translate-y-2 transition-all duration-300"
+              >
+                <span
+                  class="block text-4xl font-bold text-gold-accent leading-none"
+                  id="hours"
+                  >00</span
+                >
+                <span
+                  class="block text-sm text-cream-white mt-2 uppercase tracking-wide font-semibold"
+                  >Horas</span
+                >
+              </div>
+
+              <!-- Minutos -->
+              <div
+                class="bg-elegant-charcoal-dark border-2 border-gold-accent rounded-2xl p-4 min-w-[100px] shadow-gold hover:transform hover:-translate-y-2 transition-all duration-300"
+              >
+                <span
+                  class="block text-4xl font-bold text-gold-accent leading-none"
+                  id="minutes"
+                  >00</span
+                >
+                <span
+                  class="block text-sm text-cream-white mt-2 uppercase tracking-wide font-semibold"
+                  >Minutos</span
+                >
+              </div>
+
+              <!-- Segundos (oculto en móvil) -->
+              <div
+                class="hidden sm:block bg-elegant-charcoal-dark border-2 border-gold-accent rounded-2xl p-4 min-w-[100px] shadow-gold hover:transform hover:-translate-y-2 transition-all duration-300"
+              >
+                <span
+                  class="block text-4xl font-bold text-gold-accent leading-none"
+                  id="seconds"
+                  >00</span
+                >
+                <span
+                  class="block text-sm text-cream-white mt-2 uppercase tracking-wide font-semibold"
+                  >Segundos</span
+                >
+              </div>
+            </div>
+
+            <!-- Estrellas decorativas -->
+            <div class="flex justify-center space-x-3">
+              <i
+                class="ti ti-star-filled text-2xl text-gold-accent animate-twinkle"
+              ></i>
+              <i
+                class="ti ti-star-filled text-2xl text-gold-bright animate-twinkle"
+                style="animation-delay: 0.5s"
+              ></i>
+              <i
+                class="ti ti-star-filled text-2xl text-gold-accent animate-twinkle"
+                style="animation-delay: 1s"
+              ></i>
+            </div>
+          </div>
+
+          <!-- CÓDIGO DE VESTIMENTA -->
+          <div class="my-12 pb-8 border-b-2 border-gold-accent/20">
+            <h3 class="font-dancing text-3xl text-gold-accent text-center mb-6">
+              Código de Vestimenta
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Damas -->
+              <div
+                class="bg-gradient-to-br from-cream-white to-cream-pearl border-2 border-gold-accent rounded-2xl p-6 text-center transition-all duration-300 hover:border-gold-hover hover:shadow-md"
+              >
+                <img
+                  src="assets/images/dress-svgrepo-com.svg"
+                  alt="Vestido elegante"
+                  class="w-16 h-16 mx-auto mb-4"
+                  style="
+                    filter: brightness(0) saturate(100%) invert(54%) sepia(89%)
+                      saturate(548%) hue-rotate(18deg) brightness(92%)
+                      contrast(87%);
+                  "
+                />
+                <h4
+                  class="font-dancing text-2xl text-elegant-black mb-4 font-semibold"
+                >
+                  Damas
+                </h4>
+                <div class="text-center">
+                  <p class="font-playfair text-elegant-black font-medium">
+                    Divinas
+                  </p>
+                </div>
+              </div>
+
+              <!-- Caballeros -->
+              <div
+                class="bg-gradient-to-br from-cream-white to-cream-pearl border-2 border-gold-accent rounded-2xl p-6 text-center transition-all duration-300 hover:border-gold-hover hover:shadow-md"
+              >
+                <img
+                  src="assets/images/suit-and-bow-tie-svgrepo-com.svg"
+                  alt="Traje formal"
+                  class="w-16 h-16 mx-auto mb-4"
+                  style="
+                    filter: brightness(0) saturate(100%) invert(54%) sepia(89%)
+                      saturate(548%) hue-rotate(18deg) brightness(92%)
+                      contrast(87%);
+                  "
+                />
+                <h4
+                  class="font-dancing text-2xl text-elegant-black mb-4 font-semibold"
+                >
+                  Caballeros
+                </h4>
+                <div class="text-center">
+                  <p class="font-playfair text-elegant-black font-medium">
+                    Guapos
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Nota especial -->
+            <div
+              class="mt-6 p-6 bg-elegant-charcoal-dark border-2 border-gold-accent rounded-xl text-center shadow-lg"
+            >
+              <div class="mb-4">
+                <i
+                  class="ti ti-alert-triangle text-6xl text-gold-accent block mb-3"
+                ></i>
+              </div>
+              <h4
+                class="font-dancing text-2xl text-cream-white font-semibold mb-3"
+              >
+                Color reservado para la quinceañera
+              </h4>
+              <p class="font-playfair text-cream-white text-lg">
+                Por favor evita usar el color
+                <strong class="text-gold-accent">negro</strong>
+              </p>
+            </div>
+          </div>
+
+          <!-- REGALOS -->
+          <div class="my-12 text-center">
+            <h3 class="font-dancing text-3xl text-gold-accent mb-6">Regalos</h3>
+            <p class="font-playfair text-elegant-black mb-6 leading-relaxed">
+              Mi mejor regalo es tu presencia, pero si deseas obsequiar algo:
+            </p>
+
+            <div class="space-y-3 max-w-md mx-auto">
+              <div
+                class="block bg-gradient-to-br from-cream-white to-cream-pearl border-2 border-gold-accent rounded-xl p-6 text-center transition-all duration-300 hover:border-gold-hover hover:shadow-md text-elegant-black"
+              >
+                <i class="ti ti-gift text-4xl text-gold-deep mb-3 block"></i>
+                <h4 class="font-dancing text-xl font-semibold mb-2">
+                  Lluvia de sobres
+                </h4>
+                <p class="font-playfair text-sm text-elegant-charcoal-medium">
+                  Tu aportación será muy apreciada
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- MENSAJE DE AGRADECIMIENTO -->
+          <div class="text-center my-12">
+            <h3 class="font-dancing text-3xl text-gold-accent mb-6">
+              Con amor y gratitud
+            </h3>
+            <p class="font-playfair text-elegant-black mb-6 leading-relaxed">
+              Esperamos compartir contigo esta noche mágica llena de amor,
+              música y momentos inolvidables.
+            </p>
+
+            <!-- Decoración final -->
+            <div class="my-8">
+              <i
+                class="ti ti-heart-filled text-4xl heart-perforation-small animate-heartbeat"
+              ></i>
+            </div>
+
+            <p class="font-playfair italic text-xl text-elegant-grey">
+              Con cariño,<br />
+              <span class="font-dancing text-3xl text-gold-accent">
+                Familia Medina Pérez
+              </span>
+            </p>
+          </div>
+
+          <!-- Mariposa extra grande al final de la carta -->
+          <div
+            class="absolute -bottom-8 -left-8 w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 z-25"
+            style="transform: rotate(25deg);"
+          >
+            <img
+              src="assets/images/golden-butterfly.png"
+              alt="🦋"
+              class="w-full h-full object-contain drop-shadow-xl animate-float"
+              style="animation-duration: 4.5s; animation-delay: 1s;"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaScript para funcionalidad -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos temporales del editor
+*.tmp
+*.swp
+*.swo
+*~
+.vscode/settings.json
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencias de Node (si se añaden en el futuro)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Archivos de construcción (si se añaden en el futuro)
+dist/
+build/
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Archivos de configuración local
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos específicos del IDE
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de backup
+*.bak
+*.backup
+draft/
